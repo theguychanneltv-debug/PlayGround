@@ -1,0 +1,167 @@
+// Level data for Angry Pigs: Swapped.
+// Coordinates are in world space (1600 x 900). Ground surface is y = 820.
+// A block spec is { x, y, w, h, m, a? } where x/y is the CENTER.
+
+const wood = (x, y, w, h, a = 0) => ({ x, y, w, h, m: 'wood', a });
+const glass = (x, y, w, h, a = 0) => ({ x, y, w, h, m: 'glass', a });
+const stone = (x, y, w, h, a = 0) => ({ x, y, w, h, m: 'stone', a });
+
+export const LEVELS = [
+  {
+    id: 1,
+    name: 'Wake-Up Call',
+    sub: 'Rise and shine, birdbrain.',
+    tip: 'Aim for the legs — the tower does the rest.',
+    pigs: ['dash', 'dash', 'dash'],
+    stars: [1400, 2500, 3500],
+    birds: [
+      { x: 1045, y: 636, type: 'red' },
+      { x: 1175, y: 636, type: 'blue' },
+      { x: 1110, y: 520, type: 'yellow' },
+    ],
+    egg: { x: 1110, y: 640 },
+    tnt: [],
+    blocks: [
+      wood(1020, 750, 26, 140),
+      wood(1200, 750, 26, 140),
+      wood(1110, 668, 230, 24),
+      glass(1040, 610, 22, 92),
+      glass(1180, 610, 22, 92),
+      wood(1110, 552, 230, 24),
+    ],
+  },
+  {
+    id: 2,
+    name: 'Nest Egg',
+    sub: 'Crack the crib.',
+    tip: 'The red bomb pig pops when you tap. Use it on the stone base.',
+    pigs: ['dash', 'bomb', 'dash', 'dash'],
+    stars: [1900, 3200, 4400],
+    birds: [
+      { x: 1040, y: 635, type: 'red' },
+      { x: 1220, y: 635, type: 'blue' },
+      { x: 1070, y: 519, type: 'yellow' },
+      { x: 1190, y: 519, type: 'black' },
+    ],
+    egg: { x: 1130, y: 523 },
+    tnt: [{ x: 1130, y: 629 }],
+    blocks: [
+      stone(1010, 750, 30, 140),
+      stone(1250, 750, 30, 140),
+      wood(1130, 668, 280, 26),
+      wood(1050, 609, 24, 92),
+      wood(1210, 609, 24, 92),
+      wood(1130, 551, 240, 24),
+    ],
+  },
+  {
+    id: 3,
+    name: 'The Roost',
+    sub: 'High-rise, high risk.',
+    tip: 'The iron pig slams down when you tap. Drop it on the roof.',
+    pigs: ['dash', 'heavy', 'bomb', 'dash'],
+    stars: [2300, 3700, 5100],
+    birds: [
+      { x: 1020, y: 636, type: 'red' },
+      { x: 1100, y: 636, type: 'blue' },
+      { x: 1200, y: 636, type: 'yellow' },
+      { x: 1280, y: 636, type: 'black' },
+      { x: 1090, y: 520, type: 'red' },
+      { x: 1210, y: 520, type: 'blue' },
+    ],
+    egg: { x: 1150, y: 524 },
+    tnt: [{ x: 1150, y: 630 }],
+    blocks: [
+      stone(980, 750, 30, 140),
+      stone(1150, 750, 30, 140),
+      stone(1320, 750, 30, 140),
+      wood(1150, 668, 360, 24),
+      wood(1065, 610, 24, 92),
+      wood(1235, 610, 24, 92),
+      wood(1150, 552, 400, 24),
+    ],
+  },
+  {
+    id: 4,
+    name: 'Feather Fortress',
+    sub: 'Bring the whole thing down.',
+    tip: 'Two bombs, two weak points. Start with the middle support.',
+    pigs: ['bomb', 'dash', 'heavy', 'bomb', 'dash'],
+    stars: [2700, 4300, 5900],
+    birds: [
+      { x: 1000, y: 624, type: 'red' },
+      { x: 1050, y: 624, type: 'blue' },
+      { x: 1260, y: 624, type: 'yellow' },
+      { x: 1350, y: 624, type: 'black' },
+      { x: 1400, y: 624, type: 'red' },
+      { x: 1140, y: 507, type: 'blue' },
+      { x: 1260, y: 507, type: 'yellow' },
+    ],
+    egg: { x: 1200, y: 511 },
+    tnt: [{ x: 1200, y: 618 }],
+    blocks: [
+      stone(980, 745, 32, 150),
+      stone(1200, 745, 32, 150),
+      stone(1420, 745, 32, 150),
+      wood(1200, 657, 480, 26),
+      wood(1090, 598, 24, 90),
+      wood(1310, 598, 24, 90),
+      wood(1200, 540, 500, 26),
+    ],
+  },
+  {
+    id: 5,
+    name: 'Sunset Showdown',
+    sub: 'Last nest standing.',
+    tip: 'Bounce the bomb pig off the bridge and into the crowd.',
+    pigs: ['bomb', 'dash', 'heavy', 'bomb', 'dash'],
+    stars: [3200, 5000, 6800],
+    birds: [
+      { x: 950, y: 615, type: 'red' },
+      { x: 1020, y: 615, type: 'blue' },
+      { x: 1090, y: 615, type: 'yellow' },
+      { x: 1310, y: 615, type: 'black' },
+      { x: 1380, y: 615, type: 'red' },
+      { x: 1450, y: 615, type: 'blue' },
+      { x: 1100, y: 499, type: 'yellow' },
+      { x: 1300, y: 499, type: 'black' },
+    ],
+    egg: { x: 1200, y: 503 },
+    tnt: [
+      { x: 1170, y: 794 },
+      { x: 1230, y: 794 },
+    ],
+    blocks: [
+      stone(920, 740, 30, 160),
+      stone(1120, 740, 30, 160),
+      stone(1280, 740, 30, 160),
+      stone(1480, 740, 30, 160),
+      wood(1020, 648, 230, 26),
+      wood(1380, 648, 230, 26),
+      wood(1020, 589, 24, 92),
+      wood(1380, 589, 24, 92),
+      wood(1200, 531, 520, 24),
+    ],
+  },
+];
+
+export const PIG_INFO = {
+  dash: {
+    name: 'Turbo',
+    power: 'Tap to dash',
+    color: '#4aa8e8',
+    hint: 'TAP! Turbo pig is ready.',
+  },
+  bomb: {
+    name: 'Boomer',
+    power: 'Tap to explode',
+    color: '#ff6b35',
+    hint: 'TAP! Boomer is about to pop.',
+  },
+  heavy: {
+    name: 'Iron Pig',
+    power: 'Tap to slam',
+    color: '#9aa0a8',
+    hint: 'TAP! Drop the iron pig.',
+  },
+};

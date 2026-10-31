@@ -16,3 +16,14 @@
 - 👤 [Explore the creator's projects](https://omgithub.com/theguychanneltv-debug).
 - 🌍 [Create with OMGithub](https://omgithub.com).
 <!-- omgithub:readme:end -->
+
+## 🐷 Angry Pigs: Swapped
+
+The birds stole the golden eggs, so the pigs are taking flight. Pull back the slingshot, smash the nest, and bring the egg home across five hand-built levels.
+
+- **Drag** the pig to aim, then release to launch.
+- **Tap** anywhere in mid-air to trigger the pig's power: Turbo dash, Boomer explosion, or Iron Pig slam.
+- Chain TNT, topple towers, rescue the golden egg, and earn up to three stars per nest.
+- Progress, best scores, stars, and sound preference are saved locally.
+
+Run it as a static site from the project root (for example `python3 -m http.server 8000`) and open `index.html` through the local server. No build step is required.
