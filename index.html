@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101510" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23f36b35'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Arial' font-weight='900' font-size='29' fill='%23101510'%3EB%3C/text%3E%3C/svg%3E" />
+  <title>BUCKETS — Court Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Buckets home"><span class="brand-mark">B</span><span>BUCKETS<span class="brand-dot">.</span></span></a>
+      <div class="top-tag"><span class="live-dot"></span> STREET MODE <span class="tag-divider">/</span> 01</div>
+      <button class="icon-button" id="soundButton" aria-label="Toggle sound" title="Toggle sound"><span id="soundIcon">♫</span></button>
+    </header>
+
+    <section class="game-layout" aria-label="Basketball shooting game">
+      <div class="game-column">
+        <div class="game-heading">
+          <div><p class="eyebrow">ONE MINUTE. ALL YOU.</p><h1>COURT <span>TIME</span></h1></div>
+          <button class="reset-button" id="resetButton" aria-label="Restart game">↻ <span>RESET</span></button>
+        </div>
+
+        <div class="scoreboard">
+          <div class="score-block"><span class="stat-label">POINTS</span><strong id="score">00</strong></div>
+          <div class="score-divider"></div>
+          <div class="clock-block"><span class="stat-label">TIME LEFT</span><strong id="timer">60<span class="seconds">s</span></strong></div>
+          <div class="score-divider"></div>
+          <div class="streak-block"><span class="stat-label">STREAK</span><strong><span id="streak">0</span><span class="flame">✦</span></strong></div>
+          <div class="best-pill"><span>BEST</span><b id="best">00</b></div>
+        </div>
+
+        <div class="court-wrap" id="courtWrap">
+          <canvas id="court" width="420" height="570" aria-label="Basketball court. Drag from the ball toward the hoop to shoot." tabindex="0"></canvas>
+          <div class="court-vignette"></div>
+          <div class="game-overlay" id="overlay">
+            <div class="overlay-card" id="overlayCard">
+              <div class="overlay-icon">🏀</div>
+              <p class="eyebrow">YOUR COURT IS READY</p>
+              <h2>FIND YOUR<br><span>RHYTHM.</span></h2>
+              <p class="overlay-copy">Drag from the ball toward the hoop. Find your line, then let it fly.</p>
+              <button class="play-button" id="playButton"><span>TIP OFF</span><b>↗</b></button>
+              <span class="overlay-foot">60 SECONDS · MAKE EVERY SHOT COUNT</span>
+            </div>
+          </div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="game-controls">
+          <div class="gesture-hint"><span class="gesture-icon">↗</span><span><b>DRAG TO SHOOT</b><small>From the ball, aim for the rim</small></span></div>
+          <button class="shoot-button" id="shootButton" disabled><span>SHOOT</span><span class="shoot-arrow">↗</span></button>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="side-kicker"><span>01</span> THE DAILY RUN</div>
+        <div class="side-rule"></div>
+        <h2>BUILT<br>FOR THE<br><em>BUCKET.</em></h2>
+        <p class="side-copy">A minute on the blacktop. How hot can you get?</p>
+        <div class="side-metrics"><div><span>SHOT VALUE</span><b>2 <small>PTS</small></b></div><div><span>STREAK BONUS</span><b>+1 <small>EVERY 3</small></b></div></div>
+        <div class="side-tip"><span class="tip-star">✳</span><p><b>PRO TIP</b><br>Swishes stack your streak. Miss once and it resets. Keep your release smooth.</p></div>
+        <div class="side-bottom"><span class="court-lines">╱ ╱ ╱</span><span>NO CLOCKS. JUST BUCKETS.</span></div>
+      </aside>
+    </section>
+    <footer><span>BUCKETS © 2025</span><span>MADE FOR THE LOVE OF THE GAME <b>♥</b></span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
